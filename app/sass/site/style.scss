@@ -1,7 +1,16 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+:root{
     box-sizing: border-box;
+}
+
+*,
+::after,
+::before{
+    box-sizing:inherit;
 }
 
 a {
@@ -9,8 +18,7 @@ a {
 }
 
 img {
-    display: block;
-}
+    display: block;}
 
 body {
     font-family: $font-family;

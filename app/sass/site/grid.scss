@@ -1,6 +1,6 @@
 $columns:12;
 $gutters:30px;
-$container-width:940px;
+$container-width:970px;
 
 @for $i from 1 through $columns {
     .col-#{$i} {
