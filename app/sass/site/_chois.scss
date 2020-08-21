@@ -1,0 +1,116 @@
+.choice{
+     background: linear-gradient(180deg, #fff, #f9fbfd);
+     padding: 80px 0 35px;
+     &__wrapper {
+          padding:0 80px;
+     }
+     &__item {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 50px;
+          margin-bottom: 45px;
+     }
+     &__item--left {
+          background:url(../../../img/choice-arrow-right.png)no-repeat top left 346px;
+     }
+     &__item--right {
+          background:url(../../../img/choice-arrow-left.png)no-repeat top left 250px;
+     }
+     &__info {
+          max-width: 390px;
+          padding-top: 40px;
+     }
+     &__title {
+          @include font(700,30px,34px,$font-family);
+          color:$shadow-color;
+          padding-bottom: 30px;
+     }
+     &__text {
+          @include font(500,18px,22px,$font-family);
+          color:#535353;
+     }
+     &__img {
+          width: 310px;
+          height: 310px;
+          border-radius: 50%;
+          object-fit: cover;
+     }
+     &__item--right>.choice__img{
+          order: 0;
+     }
+     &__item--right>.choice__info{
+          order: 1;
+          text-align: right;
+     }
+}
+@media(max-width:920px){
+     .choice{
+          padding: 50px 0 15px;
+          &__wrapper {
+               padding:0 0;
+          }
+          &__item--left {
+               background:url(../../img/choice-arrow-right.png)no-repeat top center;
+          }
+          &__item--right {
+               background:url(../../img/choice-arrow-left.png)no-repeat top center;
+          }
+     }
+}
+@media(max-width:745px){
+     .choice{
+          padding: 40px 0 15px;
+          &__item {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               padding-top: 0;
+               margin-bottom: 45px;
+          }
+          &__item--left {
+               background:initial;
+          }
+          &__item--right {
+               background:initial;
+          }
+          &__info {
+               text-align: center;
+               max-width: initial;
+               width: 100%;
+               padding-top: initial;
+          }
+          &__title {
+               @include font(700,24px,28px,$font-family);
+               padding-bottom: 20px;
+          }
+          &__text {
+               @include font(500,16px,20px,$font-family);
+          }
+          &__img{
+               width: 260px;
+               height: 260px;
+               order: 0;
+          }
+          &__info{
+               order: 1;
+          }
+          &__item--right>.choice__info{
+               text-align: center;
+          }
+     }
+}
+@media(max-width:460px){
+     .choice{
+          &__title {
+               @include font(700,20px,24px,$font-family);
+               padding-bottom: 15px;
+          }
+          &__text {
+               @include font(500,14px,18px,$font-family);
+          }
+          &__img{
+               width: 200px;
+               height: 200px;
+          }
+     }
+}
