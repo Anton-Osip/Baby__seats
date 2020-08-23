@@ -1,0 +1,112 @@
+.dignity{
+     padding: 123px 0 65px;
+     &__items-text {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+     }
+     &__items-text--left {
+          text-align: right;
+     }
+     &__item{
+          position: relative;
+     }
+     &__item+&__item {
+          margin-top: 50px;
+     }
+     &__title {
+          @include font(700,20px,24px,$font-family);
+          color:$shadow-color;
+          margin-bottom: 20px;
+     }
+     &__text {
+          @include font(300,14px,18px,$font-family);
+          color:#606060;
+     }
+     &__img-box {
+          z-index: 1;
+     }
+     &__img {
+          margin: 0 auto;
+          z-index: 1;
+     }
+     &__items-text--right {
+          text-align: left;
+     }
+     &__item::after{
+          content:'';
+          display: block;
+          background:url(../../../img/chair-left1.png)no-repeat center center;
+          width: 125px;
+          height: 125px;
+          position: absolute;
+          z-index: 999;
+     }
+     &__items-text--left &__item:nth-child(1)::after{
+          left: 300px;
+          top: 0;
+     }
+     &__items-text--left &__item:nth-child(2)::after{
+          transform: rotateZ(150deg);
+          left: 300px;
+          top: -52px;
+     }
+     &__items-text--right &__item:nth-child(1)::after{
+          transform: rotateZ(125deg);
+          left: -135px;
+          top: -65px;
+     }
+     &__items-text--right &__item:nth-child(2)::after{
+          transform: rotateZ(-60deg);
+          left: -140px;
+          top: -20px;
+     }
+}
+@media(max-width:970px){
+     .dignity{
+          &__item::after{
+               display: none;
+          }
+     }
+}
+@media(max-width:824px){
+     .dignity{
+          padding: 100px 0 45px;
+
+          &__item+&__item {
+               margin-top: 25px;
+          }
+          &__title {
+               @include font(700,16px,20px,$font-family);
+               margin-bottom: 15px;
+          }
+          &__text {
+               @include font(300,12px,16px,$font-family);
+          }
+     }
+}
+@media(max-width:768px){
+     .dignity{
+          padding: 60px 0 35px;
+          &__item{
+               margin-bottom: 25px;
+          }
+          &__title {
+               @include font(700,20px,24px,$font-family);
+               margin-bottom: 20px;
+          }
+          &__text {
+               @include font(300,14px,18px,$font-family);
+          }
+          &__img-box {
+               display: none;
+          }
+          &__items-text--right {
+               text-align: left;
+          }
+          &__items-text--left{
+               text-align: left;
+               
+          }
+     }
+}
