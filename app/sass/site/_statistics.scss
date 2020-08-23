@@ -1,0 +1,58 @@
+.statistics{
+     padding: 60px 0;
+     &__item {
+          text-align: center;
+     }
+     &__value {
+          @include font(700,48px,95px,$font-family);
+          display: block;
+          background: url(../../img/chair.png)no-repeat center center;
+          color:$shadow-color;
+     }
+     &__about {
+          color:$title-color;
+          @include font(700,18px,22px,$font-family);
+          margin-top: 15px;
+     }
+}
+@media(max-width:767px){
+     .statistics{
+          padding: 40px 0;
+          &__item:nth-child(1),
+          &__item:nth-child(2){
+               padding-bottom: 10px;
+               margin-bottom: 10px;
+               position: relative;
+          }
+          &__item:nth-child(1):after,
+          &__item:nth-child(2):after{
+               content: '';
+               position: absolute;
+               bottom: 0;
+               left: 50%;
+               transform: translateX(-50%);
+               width: 80%;
+               height: 1px;
+               background-color: #dcd9d9;
+          }
+     }
+}
+@media(max-width:539px){
+     .statistics{
+          &__item:nth-child(3){
+               padding-bottom: 10px;
+               margin-bottom: 10px;
+               position: relative;
+          }
+          &__item:nth-child(3):after{
+               content: '';
+               position: absolute;
+               bottom: 0;
+               left: 50%;
+               transform: translateX(-50%);
+               width: 80%;
+               height: 1px;
+               background-color: #dcd9d9;
+          }
+     }
+}

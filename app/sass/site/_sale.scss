@@ -1,0 +1,156 @@
+.sale{
+     background:#ecf3f8 url(../../img/sale-bg.jpg)no-repeat center center/cover;
+     padding: 60px 0 40px;
+     &__wrapper {
+          display: flex; 
+          align-items: center;
+          justify-content: flex-end;
+          background:url(../../img/sale-arrow-right.png)no-repeat bottom 25px left 420px;
+     }
+     &__cost {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 155px;
+          height: 155px;
+          border-radius: 50%;
+          background-color: #fff;
+          margin-right: 70px;
+     }
+     &__old-cost {
+          @include font(300,18px ,24px, $font-family);
+          text-decoration: line-through;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          position: relative;
+          color:#1e1e1e;
+     }
+     &__old-cost::after {
+          content: '';
+          background-color:#e8e8e8;
+          width: 120px;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+     }
+     &__new-cost {
+          @include font(700,30px ,34px, $font-family);
+          color:#d04545;
+     }
+     &__info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+     }
+     &__title {
+          @include font(900,55px ,40px, $font-family);
+          color:$title-color;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+     }
+     &__subtitle {
+          @include font(700,26px ,40px, $font-family);
+          color:$title-color;
+          text-transform: uppercase;
+     }
+     &__text {
+          @include font(700,25px ,38px, $font-family);
+          color:$shadow-color;
+          padding-left: 50px;
+          background:url(../../img/present.png)no-repeat center left;
+          margin-bottom: 43px;
+     }
+     &__form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 280px;
+          height: 200px;
+          border:7px solid #fff;
+          border-radius: 25px;
+     }
+     &__data {
+          animation: phone-order 3.5s infinite;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 35px;
+     }
+     &__before-data {
+          @include font(700,14px ,20px, $font-family);
+          color:#ba6c6c;
+          max-width: 80px;
+     }
+     &__calendar {
+          margin-right:15px;
+          width: 50px;
+          height: 50px;
+          border-radius: 2px;
+          background: url(../../img/calendar.png)no-repeat center center/cover;
+          text-align: center;
+          padding: 12px 0 0;
+          @include font(700,30px ,30px, $font-family);
+          color:#fff;
+     }
+     &__after-data {
+          @include font(700,14px ,20px, $font-family);
+          color:#ba6c6c;     
+     }
+     &__form-btn {
+          @include font(700,16px ,20px, $font-family);
+          padding: 15px 50px;
+          border:initial;
+          background-color: #68b0c9;
+          text-transform: uppercase;
+          color:#fff;
+          outline:none;
+          border-radius: 20px;
+          transition:background-color .3s ,
+          transform .3s,
+          box-shadow .3s;
+     }
+     &__form-btn:hover {
+          background-color: #5ea5bd;
+          transform: scale(1.1);
+          box-shadow: 5px 0 15px rgba(#010101,0.4);
+     }
+     &__form-btn:active {
+          transform: scale(0.9);
+          box-shadow: 0px 0 2px rgba(#010101,0.1);
+     }
+}
+@media(max-width:946px){
+     .sale{
+          &__wrapper{
+               background:initial;
+               display: block;
+          }
+          &__cost{
+               display: none;
+          }
+     }
+}
+@media(max-width:456px){
+     .sale{
+          padding: 40px 0 35px;
+          &__title {
+               @include font(900,40px ,44px, $font-family);
+               letter-spacing: 1px;
+          }
+          &__subtitle {
+               @include font(700,20px ,18px, $font-family);
+               color:$title-color;
+               text-transform: uppercase;
+          }
+          &__text {
+               @include font(700,18px ,38px, $font-family);
+               padding-left: 40px;
+               margin-bottom: 33px;
+          }
+     }
+}

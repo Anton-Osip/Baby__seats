@@ -95,7 +95,6 @@
 @media(max-width:740px){
      .baner{
           padding: 55px 0 50px;
-          background:#ecf3f8 url(../../img/header_bg.jpg) no-repeat center right -900px;
           &__wrapper {
                align-items:center;
                text-align: center;
@@ -110,7 +109,6 @@
 }
 @media(max-width:426px){
      .baner{
-          background:#ecf3f8 url(../../img/header_bg.jpg) no-repeat center right -1100px;
           &__title {
                @include font(700,30px,34px,$font-family);
           }
