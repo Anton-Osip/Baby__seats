@@ -1,0 +1,155 @@
+.comparison{
+     padding: 60px 0;
+     &__wrapper {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+     }
+     .title{
+          display: flex;
+          justify-content: center;
+          margin-bottom: 30px;
+     }
+     &__title {
+          margin: 25px;
+          max-width: 150px;
+     }
+     &__title--left {
+          @include font(700,22px,1.2,$font-family);
+          color: #68b0c9;
+     }
+     &__title--right {          
+          text-align: right;
+          color: #535353;
+          @include font(700,22px,1.2,$font-family);
+     }
+     &__common {
+          text-align: right;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          min-height: 230px;
+     }
+     &__new {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+     }
+     &__text {
+          @include font(700,15px,1.2,$font-family);
+          color: #939393;
+          width: 200px;
+          padding: 10px 0;
+     }
+     &__img {
+          width: 200px;
+          height: 299px;
+     }
+     &__text--left{
+          position: relative;
+     }
+     &__text--left::after{
+          position: absolute;
+          content:'';
+          width: 81px;
+          height: 41px;
+          background: url(../../img/dignity-left.png)no-repeat center center/cover;
+          right: -90px;
+          
+     }
+     &__text--left:nth-child(1)::after{
+          transform: rotateZ(0deg);
+          top: 40px;
+     }
+     &__text--left:nth-child(2)::after{
+          transform: rotateZ(-20deg);
+          top: 20px;
+
+     }
+     &__text--left:nth-child(3)::after{
+          transform: rotateZ(-44deg);
+          top: -3px;
+
+     }
+     &__text--left:nth-child(4)::after{
+          transform: rotateZ(-60deg);
+          top: -4px;
+     }
+     &__text--right {
+          color: #68b0c9;
+          position: relative;
+     }
+     &__text--right::after{
+          position: absolute;
+          content:'';
+          width: 81px;
+          height: 41px;
+          background: url(../../img/dignity-right.png)no-repeat center center/cover;
+          left: -90px;
+     }
+     &__text--right:nth-child(1)::after{
+          transform: rotateZ(0deg);
+          top: 40px;
+     }
+     &__text--right:nth-child(2)::after{
+          transform: rotateZ(20deg);
+          top: 20px;
+
+     }
+     &__text--right:nth-child(3)::after{
+          transform: rotateZ(44deg);
+                    top: -3px;
+
+     }
+     &__text--right:nth-child(4)::after{
+          transform: rotateZ(60deg);
+                    top: -4px;
+     }
+}
+@media(max-width:914px){
+     .comparison__text--left::after{
+          display: none;
+     }
+     .comparison__text--right::after{
+          display: none;
+     }
+}
+@media(max-width:700px){
+     .comparison{
+          padding: 40px 0;
+          background: linear-gradient(180deg, #fff, #f9fbfd);
+          &__wrapper {
+               display: flex;
+               justify-content: space-around;
+               align-items: center;
+          }
+          .title{
+               margin-bottom: 20px;
+          }
+          &__title {
+               margin: 20px;
+               width: 140px;
+          }
+          &__title--left {
+               @include font(700,18px,1.2,$font-family);
+          }
+          &__title--right {          
+               @include font(700,18px,1.2,$font-family);
+          }
+          &__common {
+               padding: 0 5px;
+               justify-content: space-between;
+          }
+          &__new {
+               padding: 0 5px;
+               justify-content: space-between;
+          }
+          &__text {
+               @include font(700,12px,1.2,$font-family);
+               max-width: 140px;
+          }
+          &__img {
+               display: none;
+          }
+     }
+}
