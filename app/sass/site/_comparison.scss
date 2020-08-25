@@ -11,14 +11,15 @@
           margin-bottom: 30px;
      }
      &__title {
-          margin: 25px;
           max-width: 150px;
      }
      &__title--left {
           @include font(700,22px,1.2,$font-family);
           color: #68b0c9;
+          margin-left: 25px;
      }
-     &__title--right {          
+     &__title--right {   
+          margin-right: 25px;       
           text-align: right;
           color: #535353;
           @include font(700,22px,1.2,$font-family);
@@ -124,16 +125,17 @@
                align-items: center;
           }
           .title{
-               margin-bottom: 20px;
           }
           &__title {
                margin: 20px;
                width: 140px;
           }
           &__title--left {
+               margin-left: 5px;
                @include font(700,18px,1.2,$font-family);
           }
-          &__title--right {          
+          &__title--right {  
+               margin-right: 5px;        
                @include font(700,18px,1.2,$font-family);
           }
           &__common {
