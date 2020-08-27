@@ -1,0 +1,38 @@
+.footer{
+     padding: 20px 0;
+     &__wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+     &__link {
+          @include font(500,16px,1.2,$font-family);
+          color:#68b0c9;
+     }
+     &__inf {
+          text-align: right;
+     }
+     &__text {
+          @include font(300,14px,1.2,$font-family);
+          color:#505050;
+     }
+}
+@media(max-width:630px){
+     .footer{
+          &__wrapper {
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+          }
+          &__logo{
+               margin-bottom: 20px;
+          }
+          &__link {
+               margin-bottom: 20px;
+          }
+          &__inf {
+               text-align: center;
+          }
+     }
+}
